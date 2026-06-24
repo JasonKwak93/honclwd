@@ -1,4 +1,4 @@
-// honclwd finish-work — Stop 훅.
+// chageun finish-work — Stop 훅.
 // 에이전트가 "이제 ~하겠습니다"처럼 작업을 하겠다고 말만 하고 실제 도구 실행 없이 턴을 끝내면
 // 되돌려 지금 하게 한다(보수적: 통과 넓게 / 차단 좁게). 결정론적, 외부 호출 없음, 실패 시 안전 통과.
 // 개인/회사 정보 없음.
@@ -49,7 +49,7 @@ process.stdin.on("end", () => {
     // 7) 마지막 단락(끝 400자)만 검사.
     const tail = text.slice(-400);
 
-    // 8) 사용자 대기 신호가 있으면 통과(honclwd가 정상적으로 묻고 멈추는 경우).
+    // 8) 사용자 대기 신호가 있으면 통과(chageun가 정상적으로 묻고 멈추는 경우).
     const waitRe = /[?]|할까요|갈까요|드릴까요|주세요|골라|선택|진행해도|알려|어느|확인해|검토|괜찮(을까|나요)|승인|합의|기다리|다음\s*단계|진행\s*보고|멈춤|shall i|would you|do you want|let me know|which option|approve|confirm|waiting for/i;
     if (waitRe.test(tail)) return pass();
 
@@ -64,7 +64,7 @@ process.stdin.on("end", () => {
     }));
     process.exit(0);
   } catch (_) {
-    return pass(); // 어떤 예외든 안전 통과(honclwd를 막지 않는다).
+    return pass(); // 어떤 예외든 안전 통과(chageun를 막지 않는다).
   }
 });
 
