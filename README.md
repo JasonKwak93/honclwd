@@ -81,6 +81,8 @@ Built for people building alone. These days Claude writes the code — but when 
 
 In short: Claude does the coding; honclwd keeps the *direction, the verification, and the consistency* from slipping. (See the [Core features](#핵심-기능--core-features) table above for the full ①–⑱ list.)
 
+> **Core stance:** honclwd doesn't throw work away and regenerate it from a spec — it treats what you've built as the real asset, and refines it with a living map and continuous verification. That's how real, path-dependent work (with live users and data) actually has to be managed — which is why it fits non-developers shipping real apps.
+
 > Language-adaptive: the workflow replies in the language you use (defaults to Korean). The source content is Korean, but Claude reads it and answers you in your language.
 
 ### Requirements
@@ -126,6 +128,8 @@ This plugin uses the **Superpowers** methodology skills (brainstorming, planning
 - **화면이 점점 따로 논다.** 버튼 하나 추가할 때마다 디자인이 미묘하게 달라지는 그 현상. → 새 화면이 **디자인 규칙**(색·컴포넌트·레이아웃)과 맞는지 검증하고, 진짜 새로운 패턴은 규칙으로 등록을 제안합니다.
 
 한마디로: 코딩은 Claude가, **방향·검증·일관성이 흐트러지지 않게** 잡아주는 건 honclwd가. (전체 ①~⑱ 기능은 위 [핵심 기능](#핵심-기능--core-features) 표를 보세요.)
+
+> **핵심 관점:** honclwd는 **있는 걸 버리고 스펙에서 재생성하지 않는다.** 당신이 만든 것을 진짜 자산으로 보고, **살아있는 지도와 지속 검증으로 다듬는다.** 실제 손님·데이터가 살아있는 경로 의존적 일은 원래 이렇게 다뤄야 하며, 그래서 실제 앱을 운영하는 비개발자에게 맞는다.
 
 > 언어 적응형: 워크플로우는 사용자가 쓰는 언어로 응답합니다(기본 한국어). 소스는 한국어지만 Claude가 읽고 사용자 언어로 답합니다.
 
