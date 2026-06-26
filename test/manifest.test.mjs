@@ -36,4 +36,6 @@ test("codexPluginJson은 Codex 매니페스트를 만든다 (dependencies 키 �
   assert.equal(j.interface.displayName, "차근 (chageun)");
   assert.deepEqual(j.interface.capabilities, ["Interactive", "Read", "Write"]);
   assert.ok(!("dependencies" in j), "Codex plugin.json은 dependencies 필드를 가지면 안 됨");
+  assert.equal(j.author.name, "chacheum");
+  assert.equal(j.interface.developerName, "chacheum");
 });
