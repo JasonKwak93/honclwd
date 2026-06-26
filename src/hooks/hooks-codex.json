@@ -4,7 +4,7 @@
       {
         "matcher": "startup|resume|clear",
         "hooks": [
-          { "type": "command", "command": "node \"${PLUGIN_ROOT}/hooks/activate-codex.js\"", "async": false }
+          { "type": "command", "command": "node \"${PLUGIN_ROOT}/hooks/activate-codex.mjs\"", "async": false }
         ]
       }
     ],
@@ -12,7 +12,7 @@
       {
         "matcher": "",
         "hooks": [
-          { "type": "command", "command": "node \"${PLUGIN_ROOT}/hooks/finish-work-codex.js\"" }
+          { "type": "command", "command": "node \"${PLUGIN_ROOT}/hooks/finish-work-codex.mjs\"" }
         ]
       }
     ]

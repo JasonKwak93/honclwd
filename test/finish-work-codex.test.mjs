@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { decide } from "../src/hooks/finish-work-codex.js";
+import { decide } from "../src/hooks/finish-work-codex.mjs";
 
 test("stop_hook_active면 통과(재귀가드)", () => {
   assert.equal(decide({ stop_hook_active: true, last_assistant_message: "이제 구현하겠습니다" }).block, false);

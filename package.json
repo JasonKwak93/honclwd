@@ -2,8 +2,7 @@
   "name": "chageun-build",
   "version": "0.18.0",
   "private": true,
-  "type": "module",
-  "scripts": {
+"scripts": {
     "build": "node build/build.mjs",
     "test": "node --test test/*.test.mjs"
   }
