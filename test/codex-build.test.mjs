@@ -26,3 +26,20 @@ test("buildCodex는 Codex 플러그인 트리를 만든다", () => {
   // 공유 operating-rules는 원본과 동일(미수정)
   assert.equal(readFileSync(join(out,"rules/operating-rules.md"),"utf8"), readFileSync(join(SRC,"rules/operating-rules.md"),"utf8"));
 });
+
+test("codex README는 Codex 설치 안내를 덧붙인다(claude는 불변)", () => {
+  const out = join(mkdtempSync(join(tmpdir(), "bx-")), "codex");
+  buildCodex(SRC, out);
+  const codexReadme = readFileSync(join(out, "README.md"), "utf8");
+  const srcReadme = readFileSync(join(SRC, "README.md"), "utf8");
+
+  // codex README는 원본 내용을 포함
+  assert.ok(codexReadme.includes(srcReadme), "codex README는 원본 README 내용을 포함해야");
+
+  // codex README는 Codex 설치 섹션 포함
+  assert.ok(codexReadme.includes("Codex CLI에서 설치"), "codex README는 'Codex CLI에서 설치' 섹션을 포함해야");
+  assert.ok(codexReadme.includes("codex plugin marketplace add chacheum/chageun"), "codex README는 marketplace add 명령어를 포함해야");
+
+  // codex README는 원본보다 길어야 함 (append 확인)
+  assert.ok(codexReadme.length > srcReadme.length, "codex README는 원본보다 길어야 함");
+});
